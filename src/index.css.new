@@ -1,0 +1,139 @@
+/* =============================================================================
+   IMPORTS & FONTS
+   ============================================================================= */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap');
+
+/* =============================================================================
+   CSS VARIABLES & THEME
+   ============================================================================= */
+:root {
+  /* Colors - Dark Theme */
+  --bg: #0B0F14;
+  --card: #0F172A;
+  --border: #1E293B;
+  --fg: #E5E7EB;
+  --fg-secondary: #94A3B8;
+  --fg-muted: #64748B;
+  
+  /* Brand Colors */
+  --cyan: #06B6D4;
+  --cyan-hover: #0891B2;
+  --violet: #8B5CF6;
+  --blue: #3B82F6;
+  
+  /* Gradients */
+  --brand-gradient: linear-gradient(135deg, #06B6D4 0%, #8B5CF6 100%);
+  --hero-gradient: radial-gradient(ellipse at 50% 0%, rgba(6, 182, 212, 0.15), transparent 60%);
+  
+  /* Spacing */
+  --section-padding: 5rem 0;
+  --container-max: 1120px;
+  
+  /* Border Radius */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+}
+
+[data-theme="light"] {
+  --bg: #FFFFFF;
+  --card: #F8FAFC;
+  --border: #E2E8F0;
+  --fg: #1E293B;
+  --fg-secondary: #475569;
+  --fg-muted: #64748B;
+}
+
+/* =============================================================================
+   GLOBAL STYLES & RESETS
+   ============================================================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* =============================================================================
+   UTILITY CLASSES
+   ============================================================================= */
+.mono {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+}
+
+.gradient {
+  background: var(--brand-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.section-with-gradient {
+  background: var(--hero-gradient);
+  position: relative;
+}
+
+.section-without-gradient {
+  background: var(--bg);
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-up.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Section Titles with Gradient Hover */
+.section-title-gradient-hover {
+  cursor: default;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.section-title-gradient-hover:hover {
+  background: var(--brand-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-subtitle-gradient {
+  background: var(--brand-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
