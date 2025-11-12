@@ -134,6 +134,38 @@ export const Blog: React.FC = () => {
         </div>
       </section>
 
+      {/* Latest Articles Section */}
+      <section id="latest-articles" className="blog-latest section-with-gradient">
+        <div className="blog-latest__container">
+          <div className="section-header fade-up">
+            <h2 className="section-title-gradient-hover">{t('blogpage.latest.title')}</h2>
+            <p className="section-subtitle-gradient">{t('blogpage.latest.subtitle')}</p>
+          </div>
+
+          <div className="blog-latest__grid">
+            {[4, 5, 6, 7, 8].map((num) => (
+              <article key={num} className="latest-card fade-up">
+                <div className="latest-card__header">
+                  <span className="latest-card__date">{t(`blogpage.latest.article${num}.date`)}</span>
+                  <span className="latest-card__category">{t(`blogpage.latest.article${num}.category`)}</span>
+                </div>
+                <h3 className="latest-card__title">{t(`blogpage.latest.article${num}.title`)}</h3>
+                <p className="latest-card__excerpt">{t(`blogpage.latest.article${num}.excerpt`)}</p>
+                <div className="latest-card__footer">
+                  <div className="latest-card__meta">
+                    <span className="latest-card__author">{t(`blogpage.latest.article${num}.author`)}</span>
+                    <span className="latest-card__reading-time">{t(`blogpage.latest.article${num}.readTime`)}</span>
+                  </div>
+                  <Link to="/" className="latest-card__link">
+                    {t('blog_preview.read_more')} →
+                  </Link>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Latest News Section */}
       <section id="latest-news" className="blog-news section-with-gradient">
         <div className="blog-news__container">

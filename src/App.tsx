@@ -2,10 +2,10 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { LanguageProvider } from './context/LanguageContext';
 import { ScrollHandler } from './components/ScrollHandler';
-import { BackToTop } from './components/BackToTop';
 import { ReadingProgress } from './components/ReadingProgress';
-import { Portfolio } from './pages/Portfolio';
+import { BackToTop } from './components/BackToTop';
 import { Blog } from './pages/Blog';
+import { Portfolio } from './pages/Portfolio';
 import { AboutUs } from './pages/AboutUs';
 import './index.css';
 

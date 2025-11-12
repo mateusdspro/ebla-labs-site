@@ -191,9 +191,45 @@ const translations: Record<Language, Translations> = {
 
     // Blog Latest Articles
     'blogpage.latest.overline': 'Stay Updated',
-    'blogpage.latest.title': 'Recent Articles',
-    'blogpage.latest.subtitle': 'Latest insights and analyses',
+    'blogpage.latest.title': 'Latest Articles',
+    'blogpage.latest.subtitle': 'Discover our latest insights and analyses',
     'blogpage.latest.viewAll': 'View All Posts',
+
+    // Latest Articles Content
+    'blogpage.latest.article4.date': 'Nov 8, 2024',
+    'blogpage.latest.article4.category': 'Machine Learning',
+    'blogpage.latest.article4.title': 'Building Scalable ML Pipelines with MLOps',
+    'blogpage.latest.article4.excerpt': 'Learn how to design and implement production-ready machine learning pipelines using modern MLOps practices and tools.',
+    'blogpage.latest.article4.author': 'Mateus Ribeiro',
+    'blogpage.latest.article4.readTime': '8 min read',
+
+    'blogpage.latest.article5.date': 'Nov 5, 2024',
+    'blogpage.latest.article5.category': 'Data Engineering',
+    'blogpage.latest.article5.title': 'Modern Data Stack: From ETL to ELT',
+    'blogpage.latest.article5.excerpt': 'Explore the evolution of data processing architectures and how the modern data stack is transforming analytics.',
+    'blogpage.latest.article5.author': 'Mateus Ribeiro',
+    'blogpage.latest.article5.readTime': '6 min read',
+
+    'blogpage.latest.article6.date': 'Nov 2, 2024',
+    'blogpage.latest.article6.category': 'Generative AI',
+    'blogpage.latest.article6.title': 'RAG Systems: Enhancing LLMs with Context',
+    'blogpage.latest.article6.excerpt': 'Discover how Retrieval-Augmented Generation is revolutionizing the way we build intelligent applications with LLMs.',
+    'blogpage.latest.article6.author': 'Mateus Ribeiro',
+    'blogpage.latest.article6.readTime': '10 min read',
+
+    'blogpage.latest.article7.date': 'Oct 28, 2024',
+    'blogpage.latest.article7.category': 'Analytics',
+    'blogpage.latest.article7.title': 'Data Storytelling: From Numbers to Insights',
+    'blogpage.latest.article7.excerpt': 'Master the art of transforming complex data into compelling narratives that drive business decisions.',
+    'blogpage.latest.article7.author': 'Mateus Ribeiro',
+    'blogpage.latest.article7.readTime': '7 min read',
+
+    'blogpage.latest.article8.date': 'Oct 25, 2024',
+    'blogpage.latest.article8.category': 'Python',
+    'blogpage.latest.article8.title': 'Advanced Pandas Techniques for Data Science',
+    'blogpage.latest.article8.excerpt': 'Unlock the full potential of Pandas with advanced techniques for data manipulation and analysis.',
+    'blogpage.latest.article8.author': 'Mateus Ribeiro',
+    'blogpage.latest.article8.readTime': '9 min read',
 
     // Blog Latest News
     'blogpage.news.overline': 'What\'s New',
@@ -437,9 +473,45 @@ const translations: Record<Language, Translations> = {
 
     // Blog Latest Articles
     'blogpage.latest.overline': 'Fique Atualizado',
-    'blogpage.latest.title': 'Artigos Recentes',
-    'blogpage.latest.subtitle': 'Últimas análises e insights',
+    'blogpage.latest.title': 'Últimos Artigos',
+    'blogpage.latest.subtitle': 'Descubra nossas análises e insights mais recentes',
     'blogpage.latest.viewAll': 'Ver Todos os Artigos',
+
+    // Latest Articles Content
+    'blogpage.latest.article4.date': '8 de Nov, 2024',
+    'blogpage.latest.article4.category': 'Machine Learning',
+    'blogpage.latest.article4.title': 'Construindo Pipelines de ML Escaláveis com MLOps',
+    'blogpage.latest.article4.excerpt': 'Aprenda como projetar e implementar pipelines de machine learning prontos para produção usando práticas e ferramentas modernas de MLOps.',
+    'blogpage.latest.article4.author': 'Mateus Ribeiro',
+    'blogpage.latest.article4.readTime': '8 min de leitura',
+
+    'blogpage.latest.article5.date': '5 de Nov, 2024',
+    'blogpage.latest.article5.category': 'Engenharia de Dados',
+    'blogpage.latest.article5.title': 'Modern Data Stack: De ETL para ELT',
+    'blogpage.latest.article5.excerpt': 'Explore a evolução das arquiteturas de processamento de dados e como o modern data stack está transformando a análise.',
+    'blogpage.latest.article5.author': 'Mateus Ribeiro',
+    'blogpage.latest.article5.readTime': '6 min de leitura',
+
+    'blogpage.latest.article6.date': '2 de Nov, 2024',
+    'blogpage.latest.article6.category': 'IA Generativa',
+    'blogpage.latest.article6.title': 'Sistemas RAG: Aprimorando LLMs com Contexto',
+    'blogpage.latest.article6.excerpt': 'Descubra como a Geração Aumentada por Recuperação está revolucionando a forma como construímos aplicações inteligentes com LLMs.',
+    'blogpage.latest.article6.author': 'Mateus Ribeiro',
+    'blogpage.latest.article6.readTime': '10 min de leitura',
+
+    'blogpage.latest.article7.date': '28 de Out, 2024',
+    'blogpage.latest.article7.category': 'Analytics',
+    'blogpage.latest.article7.title': 'Data Storytelling: De Números a Insights',
+    'blogpage.latest.article7.excerpt': 'Domine a arte de transformar dados complexos em narrativas convincentes que impulsionam decisões de negócio.',
+    'blogpage.latest.article7.author': 'Mateus Ribeiro',
+    'blogpage.latest.article7.readTime': '7 min de leitura',
+
+    'blogpage.latest.article8.date': '25 de Out, 2024',
+    'blogpage.latest.article8.category': 'Python',
+    'blogpage.latest.article8.title': 'Técnicas Avançadas de Pandas para Data Science',
+    'blogpage.latest.article8.excerpt': 'Desbloqueie todo o potencial do Pandas com técnicas avançadas para manipulação e análise de dados.',
+    'blogpage.latest.article8.author': 'Mateus Ribeiro',
+    'blogpage.latest.article8.readTime': '9 min de leitura',
 
     // Blog Latest News
     'blogpage.news.overline': 'Novidades',
