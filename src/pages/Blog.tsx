@@ -124,12 +124,18 @@ export const Blog: React.FC = () => {
                   <p className="blog-card__excerpt">
                     {t(`blog_preview_${num}_p1`).substring(0, 150)}...
                   </p>
-                  <Link to="/" className="blog-card__link">
+                  <Link to="/articles" className="blog-card__link">
                     {t('blog_preview.read_more')} →
                   </Link>
                 </div>
               </article>
             ))}
+          </div>
+
+          <div className="section-header fade-up" style={{ marginTop: '3rem', textAlign: 'center' }}>
+            <Link to="/articles" className="btn btn--primary">
+              Ver Todos os Artigos →
+            </Link>
           </div>
         </div>
       </section>

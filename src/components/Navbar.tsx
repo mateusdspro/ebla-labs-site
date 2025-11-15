@@ -10,7 +10,10 @@ export const Navbar: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
 
   const isPortfolio = location.pathname === '/portfolio';
-  const isBlog = location.pathname === '/' || location.pathname.startsWith('/about-us');
+  const isBlog = location.pathname === '/' || 
+                 location.pathname.startsWith('/about-us') || 
+                 location.pathname.startsWith('/articles') || 
+                 location.pathname.startsWith('/news');
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -59,13 +62,13 @@ export const Navbar: React.FC = () => {
           </Link>
 
           <div className="navbar__links">
-            <a href="#hero" className="navbar__link">{t('nav.home')}</a>
+            <Link to="/" className="navbar__link">{t('nav.home')}</Link>
             <span className="navbar__separator">·</span>
             <Link to="/about-us" className="navbar__link">{t('nav.aboutUs')}</Link>
             <span className="navbar__separator">·</span>
-            <a href="#featured-articles" className="navbar__link">{t('nav.articles')}</a>
+            <Link to="/articles" className="navbar__link">Articles</Link>
             <span className="navbar__separator">·</span>
-            <a href="#latest-news" className="navbar__link">{t('nav.news')}</a>
+            <Link to="/news" className="navbar__link">News</Link>
             <span className="navbar__separator">·</span>
             <a href="#contact" className="navbar__link">{t('nav.contact')}</a>
             <span className="navbar__separator">·</span>

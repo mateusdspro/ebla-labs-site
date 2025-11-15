@@ -129,6 +129,30 @@ const translations: Record<Language, Translations> = {
     'blog_preview_3_p3': 'This article explores how to build a data strategy that delivers measurable business impact, from establishing data literacy across teams to implementing metrics that matter. Learn how to transform data from a cost center into a strategic asset.',
     'blog_preview.read_more': 'Read more',
 
+    // Articles Page
+    'articles.hero.title': 'EBLA ARTICLES',
+    'articles.hero.subtitle': 'Exploring ideas, data, and intelligence.',
+    'articles.hero.description': 'A curated collection of analyses, essays, and reflections on AI, data science, and innovation — connecting technology, humanity, and knowledge.',
+    'articles.hero.scroll': 'Scroll to explore',
+    'articles.featured.title': 'Featured Articles',
+    'articles.featured.subtitle': 'Deep dives into the most relevant topics',
+    'articles.all.title': 'All Articles',
+    'articles.all.subtitle': 'Explore our complete collection, from newest to oldest',
+    'articles.readMore': 'Read full article',
+    'articles.readTime': 'min read',
+
+    // News Page
+    'news.hero.title': 'EBLA NEWS',
+    'news.hero.subtitle': 'Latest insights and updates from the world of AI and technology.',
+    'news.hero.description': 'Stay updated with the latest news, breakthroughs, and perspectives shaping the future of data, intelligence, and digital transformation.',
+    'news.hero.scroll': 'Scroll to explore',
+    'news.featured.title': 'Featured News',
+    'news.featured.subtitle': 'The most important stories this week',
+    'news.all.title': 'All News',
+    'news.all.subtitle': 'Complete timeline of updates',
+    'news.readMore': 'Read more',
+    'news.readTime': 'min read',
+
     // Contact Section
     'contact.title': 'Contact',
     'contact.subtitle': 'Let\'s build something amazing together',
@@ -144,7 +168,7 @@ const translations: Record<Language, Translations> = {
 
     // Footer
     'footer.rights': '© 2025 Mateus Ribeiro — Data Scientist & AI Builder',
-    'footer.blog': '© 2025 EBLADATA — AI, Data & Intelligent Insights',
+    'footer.blog': '© 2025 Ebla Labs — AI, Data & Intelligent Insights',
 
     // Blog Page
     'blogpage.hero.title': 'EBLA LABS',
@@ -411,6 +435,30 @@ const translations: Record<Language, Translations> = {
     'blog_preview_3_p3': 'Este artigo explora como construir uma estratégia de dados que entrega impacto empresarial mensurável, desde estabelecer literacia de dados em equipes até implementar métricas que importam. Aprenda como transformar dados de um centro de custo em um ativo estratégico.',
     'blog_preview.read_more': 'Leia mais',
 
+    // Articles Page
+    'articles.hero.title': 'EBLA ARTIGOS',
+    'articles.hero.subtitle': 'Explorando ideias, dados e inteligência.',
+    'articles.hero.description': 'Uma coleção curada de análises, ensaios e reflexões sobre IA, ciência de dados e inovação — conectando tecnologia, humanidade e conhecimento.',
+    'articles.hero.scroll': 'Role para explorar',
+    'articles.featured.title': 'Artigos em Destaque',
+    'articles.featured.subtitle': 'Mergulhos profundos nos temas mais relevantes',
+    'articles.all.title': 'Todos os Artigos',
+    'articles.all.subtitle': 'Explore nossa coleção completa, do mais recente ao mais antigo',
+    'articles.readMore': 'Ler artigo completo',
+    'articles.readTime': 'min de leitura',
+
+    // News Page
+    'news.hero.title': 'EBLA NOTÍCIAS',
+    'news.hero.subtitle': 'Últimas novidades e atualizações do mundo da IA e tecnologia.',
+    'news.hero.description': 'Fique atualizado com as últimas notícias, descobertas e perspectivas que estão moldando o futuro dos dados, inteligência e transformação digital.',
+    'news.hero.scroll': 'Role para explorar',
+    'news.featured.title': 'Notícias em Destaque',
+    'news.featured.subtitle': 'As histórias mais importantes desta semana',
+    'news.all.title': 'Todas as Notícias',
+    'news.all.subtitle': 'Linha do tempo completa de atualizações',
+    'news.readMore': 'Leia mais',
+    'news.readTime': 'min de leitura',
+
     // Contact Section
     'contact.title': 'Contato',
     'contact.subtitle': 'Vamos construir algo incrível juntos',
@@ -426,7 +474,7 @@ const translations: Record<Language, Translations> = {
 
     // Footer
     'footer.rights': '© 2025 Mateus Ribeiro — Cientista de Dados & Construtor de IA',
-    'footer.blog': '© 2025 EBLADATA — IA, Dados & Insights Inteligentes',
+    'footer.blog': '© 2025 Ebla Labs — IA, Dados & Insights Inteligentes',
 
     // Blog Page
     'blogpage.hero.title': 'EBLA LABS',

@@ -6,7 +6,10 @@ export const Footer: React.FC = () => {
   const { t } = useLanguage();
   const location = useLocation();
   const isPortfolio = location.pathname === '/portfolio';
-  const isBlog = location.pathname === '/' || location.pathname.startsWith('/about-us');
+  const isBlog = location.pathname === '/' || 
+                 location.pathname.startsWith('/about-us') || 
+                 location.pathname.startsWith('/articles') || 
+                 location.pathname.startsWith('/news');
 
   return (
     <footer className="footer">
@@ -17,7 +20,29 @@ export const Footer: React.FC = () => {
         
         <div className="footer__social">
           <a
-            href="https://github.com/mateusribeiro"
+            href="https://www.linkedin.com/in/mateus-ribeiro-197043192/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer__social-link"
+            aria-label="LinkedIn"
+          >
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M18.5 0h-17C.675 0 0 .675 0 1.5v17c0 .825.675 1.5 1.5 1.5h17c.825 0 1.5-.675 1.5-1.5v-17c0-.825-.675-1.5-1.5-1.5zM6 17H3V7.5h3V17zM4.5 6.25c-.966 0-1.75-.784-1.75-1.75S3.534 2.75 4.5 2.75s1.75.784 1.75 1.75-.784 1.75-1.75 1.75zM17 17h-3v-4.5c0-1.125-.375-1.875-1.313-1.875-.712 0-1.137.487-1.325.956-.069.169-.088.4-.088.634V17h-3s.038-8.25 0-9h3v1.275c.394-.612 1.1-1.488 2.675-1.488 1.95 0 3.425 1.275 3.425 4.013V17z" />
+            </svg>
+          </a>
+          <a
+            href="https://x.com/eblalabs"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer__social-link"
+            aria-label="X (Twitter)"
+          >
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M15.751 2.5h2.875l-6.281 7.181L19.5 17.5h-5.787l-4.531-5.925L3.844 17.5H.969l6.719-7.681L1.5 2.5h5.937l4.094 5.412L15.751 2.5zm-1.006 13.469h1.594L6.344 4.131H4.644l10.1 11.838z" />
+            </svg>
+          </a>
+          <a
+            href="https://github.com/mateusdspro"
             target="_blank"
             rel="noopener noreferrer"
             className="footer__social-link"
@@ -32,29 +57,7 @@ export const Footer: React.FC = () => {
             </svg>
           </a>
           <a
-            href="https://linkedin.com/in/mateusribeiro"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="footer__social-link"
-            aria-label="LinkedIn"
-          >
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
-              <path d="M18.5 0h-17C.675 0 0 .675 0 1.5v17c0 .825.675 1.5 1.5 1.5h17c.825 0 1.5-.675 1.5-1.5v-17c0-.825-.675-1.5-1.5-1.5zM6 17H3V7.5h3V17zM4.5 6.25c-.966 0-1.75-.784-1.75-1.75S3.534 2.75 4.5 2.75s1.75.784 1.75 1.75-.784 1.75-1.75 1.75zM17 17h-3v-4.5c0-1.125-.375-1.875-1.313-1.875-.712 0-1.137.487-1.325.956-.069.169-.088.4-.088.634V17h-3s.038-8.25 0-9h3v1.275c.394-.612 1.1-1.488 2.675-1.488 1.95 0 3.425 1.275 3.425 4.013V17z" />
-            </svg>
-          </a>
-          <a
-            href="https://twitter.com/mateusribeiro"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="footer__social-link"
-            aria-label="X (Twitter)"
-          >
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
-              <path d="M15.751 2.5h2.875l-6.281 7.181L19.5 17.5h-5.787l-4.531-5.925L3.844 17.5H.969l6.719-7.681L1.5 2.5h5.937l4.094 5.412L15.751 2.5zm-1.006 13.469h1.594L6.344 4.131H4.644l10.1 11.838z" />
-            </svg>
-          </a>
-          <a
-            href="mailto:mateus@dspro.com"
+            href="mailto:mateus.dspro@gmail.com"
             className="footer__social-link"
             aria-label="Email"
           >
