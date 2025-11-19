@@ -3,9 +3,62 @@ import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
+import { SEO } from '../components/SEO';
 
 export const Blog: React.FC = () => {
   const { t } = useLanguage();
+
+  // Schema Markup for Blog Homepage
+  const blogSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://eblalabs.com/#website",
+        "url": "https://eblalabs.com/",
+        "name": "Ebla Labs",
+        "description": "AI, Data Science, and Machine Learning insights and solutions",
+        "publisher": {
+          "@id": "https://eblalabs.com/#organization"
+        },
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "Blog",
+        "@id": "https://eblalabs.com/#blog",
+        "url": "https://eblalabs.com/",
+        "name": "Ebla Labs Blog",
+        "description": "Articles and insights about AI, machine learning, data science, and technology",
+        "publisher": {
+          "@id": "https://eblalabs.com/#organization"
+        },
+        "blogPost": [
+          {
+            "@type": "BlogPosting",
+            "headline": "How RAG is Redefining AI Systems",
+            "url": "https://eblalabs.com/articles/rag-systems-redefining-ai",
+            "datePublished": "2024-11-12",
+            "author": {
+              "@type": "Person",
+              "name": "Mateus Ribeiro"
+            }
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://eblalabs.com/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://eblalabs.com/"
+          }
+        ]
+      }
+    ]
+  };
 
   useEffect(() => {
     // Intersection Observer for fade-up animations
@@ -27,6 +80,14 @@ export const Blog: React.FC = () => {
 
   return (
     <div className="blog-page">
+      <SEO
+        title="Ebla Labs - AI, Data Science & Machine Learning Insights"
+        description="How can AI transform your business? Discover expert insights on machine learning, data science, MLOps, and generative AI. Learn from real-world case studies and practical solutions."
+        canonical="https://eblalabs.com/"
+        type="website"
+        image="/images/imagem.blog1.png"
+        schema={blogSchema}
+      />
       <Navbar />
 
       {/* Hero Section */}

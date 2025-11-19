@@ -3,9 +3,58 @@ import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
+import { SEO } from '../components/SEO';
 
 export const Portfolio: React.FC = () => {
   const { t } = useLanguage();
+
+  // Schema Markup for Portfolio/Profile Page
+  const portfolioSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://eblalabs.com/portfolio#person",
+    "name": "Mateus Ribeiro",
+    "alternateName": "Ebla Labs",
+    "url": "https://eblalabs.com/portfolio",
+    "image": "https://eblalabs.com/images/foto.perfil.mateus.semfundo.png",
+    "jobTitle": "AI & Data Science Specialist",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Ebla Labs"
+    },
+    "description": "AI and Data Science specialist with expertise in Machine Learning, MLOps, Python, cloud computing, and business intelligence. Transforms data into intelligent insights.",
+    "knowsAbout": [
+      "Artificial Intelligence",
+      "Machine Learning",
+      "Data Science",
+      "MLOps",
+      "Python Programming",
+      "Cloud Computing",
+      "Business Intelligence",
+      "Generative AI",
+      "Data Engineering",
+      "Predictive Analytics"
+    ],
+    "sameAs": [
+      "https://www.linkedin.com/in/mateus-ribeiro-197043192/",
+      "https://github.com/mateusdspro",
+      "https://x.com/eblalabs",
+      "https://instagram.com/eblalabs",
+      "https://youtube.com/@eblalabs"
+    ],
+    "email": "mateus.dspro@gmail.com",
+    "telephone": "+61406846127",
+    "hasCredential": [
+      {
+        "@type": "EducationalOccupationalCredential",
+        "name": "Data Science & Machine Learning"
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        "name": "MLOps & Cloud Engineering"
+      }
+    ]
+  };
 
   useEffect(() => {
     // Intersection Observer for fade-up animations
@@ -84,6 +133,14 @@ export const Portfolio: React.FC = () => {
 
   return (
     <div className="portfolio">
+      <SEO
+        title="Portfolio - Mateus Ribeiro"
+        description="Who is Mateus Ribeiro? AI & Data Science specialist with expertise in machine learning, MLOps, Python, and cloud solutions. View projects, skills, and professional experience."
+        canonical="https://eblalabs.com/portfolio"
+        type="profile"
+        image="/images/foto.perfil.mateus.semfundo.png"
+        schema={portfolioSchema}
+      />
       <Navbar />
 
       {/* Hero Section */}

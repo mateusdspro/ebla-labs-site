@@ -3,9 +3,54 @@ import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
+import { SEO } from '../components/SEO';
 
 export const AboutUs: React.FC = () => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { t, language } = useLanguage();
+
+  // Schema Markup for About Us / Organization Page
+  const aboutSchema = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About Ebla Labs - AI & Data Science Mission",
+    "description": "Learn about Ebla Labs, our mission to connect ancient wisdom with modern AI, and how we transform data into intelligent insights.",
+    "url": "https://eblalabs.com/about-us",
+    "mainEntity": {
+      "@type": "Organization",
+      "@id": "https://eblalabs.com/#organization",
+      "name": "Ebla Labs",
+      "alternateName": "EBLADATA",
+      "url": "https://eblalabs.com",
+      "logo": "https://eblalabs.com/images/Logo simples circular esmaltaria preto.png",
+      "description": "Ebla Labs is an AI and data science organization that bridges ancient wisdom with modern technology, specializing in machine learning, MLOps, and intelligent data solutions.",
+      "foundingDate": "2024",
+      "founder": {
+        "@type": "Person",
+        "name": "Mateus Ribeiro",
+        "url": "https://eblalabs.com/portfolio"
+      },
+      "email": "mateus.dspro@gmail.com",
+      "sameAs": [
+        "https://www.linkedin.com/in/mateus-ribeiro-197043192/",
+        "https://github.com/mateusdspro",
+        "https://x.com/eblalabs",
+        "https://instagram.com/eblalabs",
+        "https://youtube.com/@eblalabs"
+      ],
+      "knowsAbout": [
+        "Artificial Intelligence",
+        "Machine Learning",
+        "Data Science",
+        "MLOps",
+        "Generative AI",
+        "Data Engineering",
+        "Business Intelligence",
+        "Cloud Computing",
+        "Ancient History and Technology"
+      ]
+    }
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -29,6 +74,14 @@ export const AboutUs: React.FC = () => {
 
   return (
     <div className="aboutus-page">
+      <SEO
+        title="About Us - Ebla Labs Mission & History"
+        description="What is Ebla Labs? Discover our mission to bridge ancient wisdom with modern AI, connecting 4,500 years of intelligence from Ebla's clay tablets to neural networks."
+        canonical="https://eblalabs.com/about-us"
+        type="website"
+        image="/images/Logo simples circular esmaltaria preto.png"
+        schema={aboutSchema}
+      />
       <Navbar />
 
       {/* Hero Section */}

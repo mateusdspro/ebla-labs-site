@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
+import { SEO } from '../components/SEO';
 import { useLanguage } from '../context/LanguageContext';
 import { getFeaturedNews, getAllNews } from '../data/newsData';
 
@@ -9,6 +10,32 @@ export const News: React.FC = () => {
   const { t, language } = useLanguage();
   const featuredNews = getFeaturedNews();
   const allNews = getAllNews();
+
+  // Schema Markup for News Collection
+  const newsSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Ebla Labs News - Latest AI & Technology Updates",
+    "description": "Stay updated with the latest news, breakthroughs, and perspectives shaping the future of AI, data science, and digital transformation.",
+    "url": "https://eblalabs.com/news",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Ebla Labs",
+      "url": "https://eblalabs.com"
+    },
+    "hasPart": allNews.map(newsItem => ({
+      "@type": "NewsArticle",
+      "headline": typeof newsItem.title === 'string' ? newsItem.title : newsItem.title[language],
+      "description": typeof newsItem.excerpt === 'string' ? newsItem.excerpt : newsItem.excerpt[language],
+      "url": `https://eblalabs.com/news/${newsItem.slug}`,
+      "datePublished": newsItem.date,
+      "author": {
+        "@type": "Person",
+        "name": newsItem.author
+      },
+      "image": `https://eblalabs.com${newsItem.image}`
+    }))
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -28,6 +55,14 @@ export const News: React.FC = () => {
 
   return (
     <div className="news-page">
+      <SEO
+        title="News - Latest AI & Technology Updates"
+        description="What's new in AI and technology? Discover the latest breakthroughs, updates, and trends in artificial intelligence, machine learning, and digital transformation."
+        canonical="https://eblalabs.com/news"
+        type="website"
+        image="/images/noticias.png"
+        schema={newsSchema}
+      />
       <Navbar />
 
       {/* Hero Section - PADRÃO HOME */}

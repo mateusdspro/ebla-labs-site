@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Homepage (Blog) - Prioridade Máxima -->
+  <url>
+    <loc>https://eblalabs.com/</loc>
+    <lastmod>2024-11-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eblalabs.com/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eblalabs.com/" />
+  </url>
+  
+  <!-- Portfolio Page -->
+  <url>
+    <loc>https://eblalabs.com/portfolio</loc>
+    <lastmod>2024-11-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eblalabs.com/portfolio" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eblalabs.com/portfolio" />
+  </url>
+  
+  <!-- About Us Page -->
+  <url>
+    <loc>https://eblalabs.com/about-us</loc>
+    <lastmod>2024-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eblalabs.com/about-us" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eblalabs.com/about-us" />
+  </url>
+  
+  <!-- Articles Page (Index) -->
+  <url>
+    <loc>https://eblalabs.com/articles</loc>
+    <lastmod>2024-11-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eblalabs.com/articles" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eblalabs.com/articles" />
+  </url>
+  
+  <!-- News Page (Index) -->
+  <url>
+    <loc>https://eblalabs.com/news</loc>
+    <lastmod>2024-11-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eblalabs.com/news" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eblalabs.com/news" />
+  </url>
+  
+  <!-- Individual Articles -->
+  <url>
+    <loc>https://eblalabs.com/articles/rag-systems-redefining-ai</loc>
+    <lastmod>2024-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eblalabs.com/articles/rag-systems-redefining-ai" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eblalabs.com/articles/rag-systems-redefining-ai" />
+  </url>
+  
+  <url>
+    <loc>https://eblalabs.com/articles/mlops-producao-modelos</loc>
+    <lastmod>2024-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eblalabs.com/articles/mlops-producao-modelos" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eblalabs.com/articles/mlops-producao-modelos" />
+  </url>
+  
+  <url>
+    <loc>https://eblalabs.com/articles/data-storytelling-bi</loc>
+    <lastmod>2024-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eblalabs.com/articles/data-storytelling-bi" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eblalabs.com/articles/data-storytelling-bi" />
+  </url>
+  
+  <!-- Individual News -->
+  <url>
+    <loc>https://eblalabs.com/news/openai-lanca-gpt-5-revolucao-ia</loc>
+    <lastmod>2024-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eblalabs.com/news/openai-lanca-gpt-5-revolucao-ia" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eblalabs.com/news/openai-lanca-gpt-5-revolucao-ia" />
+  </url>
+  
+  <url>
+    <loc>https://eblalabs.com/news/google-gemini-ultra-2-lancamento</loc>
+    <lastmod>2024-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eblalabs.com/news/google-gemini-ultra-2-lancamento" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eblalabs.com/news/google-gemini-ultra-2-lancamento" />
+  </url>
+  
+  <url>
+    <loc>https://eblalabs.com/news/anthropic-claude-3-5-sonnet-atualizacao</loc>
+    <lastmod>2024-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eblalabs.com/news/anthropic-claude-3-5-sonnet-atualizacao" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://eblalabs.com/news/anthropic-claude-3-5-sonnet-atualizacao" />
+  </url>
+  
+</urlset>
+

@@ -1,3 +1,43 @@
+# Robots.txt para Ebla Labs - Otimizado para SEO e IA
 # https://www.robotstxt.org/robotstxt.html
+
+# Permitir todos os bots de IA e motores de busca
 User-agent: *
-Disallow:
+Allow: /
+
+# Bots de IA específicos (ChatGPT, Claude, Perplexity, etc.)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Bloqueios (se houver áreas privadas no futuro)
+# User-agent: *
+# Disallow: /admin/
+# Disallow: /private/
+
+# Sitemap
+Sitemap: https://eblalabs.com/sitemap.xml
+
+# Crawl-delay (opcional, remova se não necessário)
+# User-agent: *
+# Crawl-delay: 0

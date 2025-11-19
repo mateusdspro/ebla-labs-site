@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
+import { SEO } from '../components/SEO';
 import { useLanguage } from '../context/LanguageContext';
 import { getFeaturedArticles, getAllArticles } from '../data/articlesData';
 
@@ -9,6 +10,32 @@ export const Articles: React.FC = () => {
   const { t, language } = useLanguage();
   const featuredArticles = getFeaturedArticles();
   const allArticles = getAllArticles();
+
+  // Schema Markup for Articles Collection
+  const articlesSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Ebla Labs Articles - AI, Data Science & Machine Learning",
+    "description": "Expert articles about artificial intelligence, machine learning, data science, MLOps, and innovative technology solutions.",
+    "url": "https://eblalabs.com/articles",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Ebla Labs",
+      "url": "https://eblalabs.com"
+    },
+    "hasPart": allArticles.map(article => ({
+      "@type": "BlogPosting",
+      "headline": typeof article.title === 'string' ? article.title : article.title[language],
+      "description": typeof article.excerpt === 'string' ? article.excerpt : article.excerpt[language],
+      "url": `https://eblalabs.com/articles/${article.slug}`,
+      "datePublished": article.date,
+      "author": {
+        "@type": "Person",
+        "name": article.author
+      },
+      "image": `https://eblalabs.com${article.image}`
+    }))
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -37,6 +64,14 @@ export const Articles: React.FC = () => {
 
   return (
     <div className="articles-page">
+      <SEO
+        title="Articles - AI, Data Science & Machine Learning"
+        description="What are the latest trends in AI and data science? Explore in-depth articles on machine learning, MLOps, generative AI, data engineering, and business intelligence."
+        canonical="https://eblalabs.com/articles"
+        type="website"
+        image="/images/imagem.artigos.png"
+        schema={articlesSchema}
+      />
       <Navbar />
 
       {/* Hero Section - PADRÃO HOME */}
