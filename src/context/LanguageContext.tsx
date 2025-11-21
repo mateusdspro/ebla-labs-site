@@ -320,6 +320,20 @@ const translations: Record<Language, Translations> = {
     'aboutus.essence.tagline': '**Ebla Labs** — Intelligence is our legacy.',
     'aboutus.cta.text': 'Want to learn more or get in touch with us?',
     'aboutus.cta.button': 'Get in Touch',
+
+    // Thank You Page - Contact
+    'thankYou.title': 'MESSAGE RECEIVED!',
+    'thankYou.subtitle': 'Thank you for reaching out',
+    'thankYou.description': 'Your message has been successfully received. We\'ll get back to you within 24 hours with a response to your inquiry.',
+    'thankYou.button': 'Back to Home',
+    'thankYou.info': 'Check your email for a confirmation message.',
+
+    // Thank You Page - Newsletter
+    'thankYouNewsletter.title': 'WELCOME TO EBLA LABS!',
+    'thankYouNewsletter.subtitle': 'Thank you for subscribing to our newsletter',
+    'thankYouNewsletter.description': 'You are now connected to the best insights on AI, Data Science, and Innovation. Get ready to receive exclusive content, in-depth analysis, and the latest trends shaping the future of artificial intelligence.',
+    'thankYouNewsletter.button': 'Explore Articles',
+    'thankYouNewsletter.info': 'You\'ll receive our first email soon. Don\'t forget to check your inbox!',
   },
   pt: {
     // Navbar
@@ -626,6 +640,20 @@ const translations: Record<Language, Translations> = {
     'aboutus.essence.tagline': '**Ebla Labs** — Inteligência é nosso legado.',
     'aboutus.cta.text': 'Quer saber mais ou entrar em contato conosco?',
     'aboutus.cta.button': 'Fale Comigo',
+
+    // Thank You Page - Contact
+    'thankYou.title': 'MENSAGEM RECEBIDA!',
+    'thankYou.subtitle': 'Obrigado por entrar em contato',
+    'thankYou.description': 'Sua mensagem foi recebida com sucesso. Entraremos em contato com você em até 24 horas respondendo à sua solicitação.',
+    'thankYou.button': 'Voltar para Home',
+    'thankYou.info': 'Verifique seu email para uma mensagem de confirmação.',
+
+    // Thank You Page - Newsletter
+    'thankYouNewsletter.title': 'BEM-VINDO À EBLA LABS!',
+    'thankYouNewsletter.subtitle': 'Obrigado por se inscrever na nossa newsletter',
+    'thankYouNewsletter.description': 'Você agora está conectado às melhores insights sobre IA, Ciência de Dados e Inovação. Prepare-se para receber conteúdos exclusivos, análises aprofundadas e as últimas tendências que estão moldando o futuro da inteligência artificial.',
+    'thankYouNewsletter.button': 'Explorar Artigos',
+    'thankYouNewsletter.info': 'Você receberá nosso primeiro email em breve. Não esqueça de verificar sua caixa de entrada!',
   },
 };
 

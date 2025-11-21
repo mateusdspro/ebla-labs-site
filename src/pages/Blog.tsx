@@ -282,7 +282,7 @@ export const Blog: React.FC = () => {
               <input type="hidden" name="access_key" value="7b6c4f3f-21f4-4376-a322-c8edfd26d341" />
               <input type="hidden" name="subject" value="Nova inscrição na Newsletter - Ebla Labs" />
               <input type="hidden" name="from_name" value="Ebla Labs Website" />
-              <input type="hidden" name="redirect" value="https://eblalabs.com/?newsletter=success" />
+              <input type="hidden" name="redirect" value="https://ebla-labs-site.vercel.app/thank-you-newsletter" />
               
               <div className="newsletter__form-row">
                 <div className="form-group">

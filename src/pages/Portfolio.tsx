@@ -433,7 +433,7 @@ export const Portfolio: React.FC = () => {
               <input type="hidden" name="access_key" value="0b5196bd-c686-40e0-96d1-837c81aaf0dd" />
               <input type="hidden" name="subject" value="Novo contato via Portfolio - Ebla Labs" />
               <input type="hidden" name="from_name" value="Ebla Labs Portfolio" />
-              <input type="hidden" name="redirect" value="https://eblalabs.com/portfolio?contact=success" />
+              <input type="hidden" name="redirect" value="https://ebla-labs-site.vercel.app/thank-you" />
               
               <div className="form-group">
                 <label htmlFor="name">{t('contact.form.name')}</label>
