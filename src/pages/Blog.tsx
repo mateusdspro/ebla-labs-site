@@ -273,7 +273,17 @@ export const Blog: React.FC = () => {
             </h2>
             <p className="newsletter__subtitle">{t('blogpage.newsletter.subtitle')}</p>
 
-            <form className="newsletter__form">
+            <form 
+              action="https://api.web3forms.com/submit" 
+              method="POST"
+              className="newsletter__form"
+            >
+              {/* Web3Forms Access Key - Substituir com sua key real */}
+              <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY_HERE" />
+              <input type="hidden" name="subject" value="Nova inscrição na Newsletter - Ebla Labs" />
+              <input type="hidden" name="from_name" value="Ebla Labs Website" />
+              <input type="hidden" name="redirect" value="https://eblalabs.com/?newsletter=success" />
+              
               <div className="newsletter__form-row">
                 <div className="form-group">
                   <label htmlFor="newsletter-name">{t('blogpage.newsletter.name')}</label>

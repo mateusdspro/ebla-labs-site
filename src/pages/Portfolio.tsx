@@ -74,6 +74,7 @@ export const Portfolio: React.FC = () => {
     return () => observer.disconnect();
   }, []);
 
+  // Projetos mantidos com traduções do LanguageContext
   const projectsData = [
     {
       title: t('project_1_title'),
@@ -82,7 +83,7 @@ export const Portfolio: React.FC = () => {
       solution: t('project_1_solution'),
       impact: t('project_1_impact'),
       tags: ['Python', 'TensorFlow', 'SQL', 'FastAPI', 'Docker'],
-      github: 'https://github.com/mateusribeiro/recommendation-system',
+      github: 'https://github.com/mateusdspro/recommendation-system',
     },
     {
       title: t('project_2_title'),
@@ -91,7 +92,7 @@ export const Portfolio: React.FC = () => {
       solution: t('project_2_solution'),
       impact: t('project_2_impact'),
       tags: ['Python', 'scikit-learn', 'Power BI', 'Azure ML', 'SQL'],
-      github: 'https://github.com/mateusribeiro/predictive-maintenance',
+      github: 'https://github.com/mateusdspro/predictive-maintenance',
     },
     {
       title: t('project_3_title'),
@@ -100,7 +101,7 @@ export const Portfolio: React.FC = () => {
       solution: t('project_3_solution'),
       impact: t('project_3_impact'),
       tags: ['Python', 'Airflow', 'dbt', 'Snowflake', 'Looker Studio'],
-      github: 'https://github.com/mateusribeiro/data-automation',
+      github: 'https://github.com/mateusdspro/data-automation',
     },
     {
       title: t('project_4_title'),
@@ -109,7 +110,7 @@ export const Portfolio: React.FC = () => {
       solution: t('project_4_solution'),
       impact: t('project_4_impact'),
       tags: ['Generative AI', 'RAG', 'OpenAI', 'Pinecone', 'Next.js'],
-      github: 'https://github.com/mateusribeiro/genai-assistant',
+      github: 'https://github.com/mateusdspro/genai-assistant',
     },
     {
       title: t('project_5_title'),
@@ -118,7 +119,7 @@ export const Portfolio: React.FC = () => {
       solution: t('project_5_solution'),
       impact: t('project_5_impact'),
       tags: ['Python', 'XGBoost', 'Prophet', 'Pandas', 'Power BI'],
-      github: 'https://github.com/mateusribeiro/revenue-forecasting',
+      github: 'https://github.com/mateusdspro/revenue-forecasting',
     },
     {
       title: t('project_6_title'),
@@ -127,7 +128,7 @@ export const Portfolio: React.FC = () => {
       solution: t('project_6_solution'),
       impact: t('project_6_impact'),
       tags: ['SQL', 'dbt', 'Python', 'Scoring', 'Dashboard'],
-      github: 'https://github.com/mateusribeiro/customer-360',
+      github: 'https://github.com/mateusdspro/customer-360',
     },
   ];
 
@@ -423,7 +424,17 @@ export const Portfolio: React.FC = () => {
               </div>
             </div>
 
-            <form className="contact__form fade-up">
+            <form 
+              action="https://api.web3forms.com/submit" 
+              method="POST"
+              className="contact__form fade-up"
+            >
+              {/* Web3Forms Access Key - Substituir com sua key real */}
+              <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY_HERE" />
+              <input type="hidden" name="subject" value="Novo contato via Portfolio - Ebla Labs" />
+              <input type="hidden" name="from_name" value="Ebla Labs Portfolio" />
+              <input type="hidden" name="redirect" value="https://eblalabs.com/portfolio?contact=success" />
+              
               <div className="form-group">
                 <label htmlFor="name">{t('contact.form.name')}</label>
                 <input
