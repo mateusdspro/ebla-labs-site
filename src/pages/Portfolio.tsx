@@ -429,8 +429,8 @@ export const Portfolio: React.FC = () => {
               method="POST"
               className="contact__form fade-up"
             >
-              {/* Web3Forms Access Key - Substituir com sua key real */}
-              <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY_HERE" />
+              {/* Web3Forms Access Key - Contact */}
+              <input type="hidden" name="access_key" value="0b5196bd-c686-40e0-96d1-837c81aaf0dd" />
               <input type="hidden" name="subject" value="Novo contato via Portfolio - Ebla Labs" />
               <input type="hidden" name="from_name" value="Ebla Labs Portfolio" />
               <input type="hidden" name="redirect" value="https://eblalabs.com/portfolio?contact=success" />
