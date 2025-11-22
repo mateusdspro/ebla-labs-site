@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { Navbar } from '../components/Navbar';
@@ -7,24 +7,6 @@ import { Footer } from '../components/Footer';
 export const ThankYouNewsletter: React.FC = () => {
   const { t } = useLanguage();
 
-  useEffect(() => {
-    // Fade-up animation
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    document.querySelectorAll('.fade-up').forEach((el) => observer.observe(el));
-
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <div className="thank-you-page">
       <Navbar />
@@ -32,7 +14,7 @@ export const ThankYouNewsletter: React.FC = () => {
       {/* Thank You Newsletter Section */}
       <section className="thank-you-hero section-with-gradient">
         <div className="thank-you-hero__container">
-          <div className="thank-you-hero__content fade-up">
+          <div className="thank-you-hero__content">
             {/* Success Icon - Envelope/Mail */}
             <div className="thank-you-hero__icon">
               <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
@@ -83,7 +65,7 @@ export const ThankYouNewsletter: React.FC = () => {
             </Link>
 
             {/* Additional Info */}
-            <div className="thank-you-hero__info fade-up">
+            <div className="thank-you-hero__info">
               <p className="thank-you-hero__info-text">
                 {t('thankYouNewsletter.info')}
               </p>
