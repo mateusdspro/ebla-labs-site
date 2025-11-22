@@ -70,7 +70,7 @@ export const Navbar: React.FC = () => {
             <span className="navbar__separator">·</span>
             <Link to="/news" className="navbar__link">News</Link>
             <span className="navbar__separator">·</span>
-            <a href="#contact" className="navbar__link">{t('nav.contact')}</a>
+            <a href="/#contact" className="navbar__link">{t('nav.contact')}</a>
             <span className="navbar__separator">·</span>
             <Link to="/portfolio" className="navbar__link navbar__link--portfolio">{t('nav.portfolio')}</Link>
           </div>
