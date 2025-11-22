@@ -1,81 +1,75 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
-import { Navbar } from '../components/Navbar';
-import { Footer } from '../components/Footer';
 
 export const ThankYouNewsletter: React.FC = () => {
   const { t } = useLanguage();
 
   return (
-    <div className="thank-you-page">
-      <Navbar />
-
-      {/* Thank You Newsletter Section */}
-      <section className="thank-you-hero section-with-gradient">
-        <div className="thank-you-hero__container">
-          <div className="thank-you-hero__content">
-            {/* Success Icon - Envelope/Mail */}
-            <div className="thank-you-hero__icon">
-              <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
-                <rect x="20" y="35" width="80" height="50" rx="4" stroke="url(#gradient)" strokeWidth="4" />
-                <path
-                  d="M20 40L60 65L100 40"
-                  stroke="url(#gradient)"
-                  strokeWidth="4"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <circle cx="85" cy="75" r="15" fill="#1a1a1a" stroke="url(#gradient)" strokeWidth="3" />
-                <path
-                  d="M80 75L83 78L90 71"
-                  stroke="url(#gradient)"
-                  strokeWidth="3"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <defs>
-                  <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#6366f1" />
-                    <stop offset="50%" stopColor="#06b6d4" />
-                    <stop offset="100%" stopColor="#8b5cf6" />
-                  </linearGradient>
-                </defs>
-              </svg>
-            </div>
-
-            {/* Title */}
-            <h1 className="thank-you-hero__title">
-              <span className="mono gradient">{t('thankYouNewsletter.title')}</span>
-            </h1>
-
-            {/* Subtitle */}
-            <p className="thank-you-hero__subtitle">
-              {t('thankYouNewsletter.subtitle')}
-            </p>
-
-            {/* Description */}
-            <p className="thank-you-hero__description">
-              {t('thankYouNewsletter.description')}
-            </p>
-
-            {/* CTA Button */}
-            <Link to="/articles" className="btn btn--primary thank-you-hero__button">
-              {t('thankYouNewsletter.button')}
-            </Link>
-
-            {/* Additional Info */}
-            <div className="thank-you-hero__info">
-              <p className="thank-you-hero__info-text">
-                {t('thankYouNewsletter.info')}
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <Footer />
+    <div style={{
+      minHeight: '100vh',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      padding: '2rem',
+      textAlign: 'center',
+      background: '#0B0F14',
+      color: '#E5E7EB'
+    }}>
+      <div style={{ maxWidth: '600px' }}>
+        <h1 style={{
+          fontSize: '2.5rem',
+          fontWeight: 'bold',
+          background: 'linear-gradient(135deg, #06B6D4 0%, #8B5CF6 100%)',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          marginBottom: '1rem'
+        }}>
+          {t('thankYouNewsletter.title')}
+        </h1>
+        
+        <p style={{
+          fontSize: '1.25rem',
+          color: '#06B6D4',
+          marginBottom: '1.5rem'
+        }}>
+          {t('thankYouNewsletter.subtitle')}
+        </p>
+        
+        <p style={{
+          fontSize: '1.125rem',
+          lineHeight: '1.7',
+          color: '#94A3B8',
+          marginBottom: '2rem'
+        }}>
+          {t('thankYouNewsletter.description')}
+        </p>
+        
+        <Link 
+          to="/articles" 
+          style={{
+            display: 'inline-block',
+            padding: '1rem 2rem',
+            background: 'linear-gradient(135deg, #06B6D4 0%, #8B5CF6 100%)',
+            color: 'white',
+            textDecoration: 'none',
+            borderRadius: '0.5rem',
+            fontWeight: '600',
+            fontSize: '1.125rem'
+          }}
+        >
+          {t('thankYouNewsletter.button')}
+        </Link>
+        
+        <p style={{
+          marginTop: '2rem',
+          fontSize: '0.9375rem',
+          color: '#64748B'
+        }}>
+          {t('thankYouNewsletter.info')}
+        </p>
+      </div>
     </div>
   );
 };
-

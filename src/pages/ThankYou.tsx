@@ -1,73 +1,75 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
-import { Navbar } from '../components/Navbar';
-import { Footer } from '../components/Footer';
 
 export const ThankYou: React.FC = () => {
   const { t } = useLanguage();
 
   return (
-    <div className="thank-you-page">
-      <Navbar />
-
-      {/* Thank You Section */}
-      <section className="thank-you-hero section-with-gradient">
-        <div className="thank-you-hero__container">
-          <div className="thank-you-hero__content">
-            {/* Success Icon */}
-            <div className="thank-you-hero__icon">
-              <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
-                <circle cx="60" cy="60" r="55" stroke="url(#gradient)" strokeWidth="4" />
-                <path
-                  d="M35 60L50 75L85 40"
-                  stroke="url(#gradient)"
-                  strokeWidth="6"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <defs>
-                  <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#6366f1" />
-                    <stop offset="50%" stopColor="#06b6d4" />
-                    <stop offset="100%" stopColor="#8b5cf6" />
-                  </linearGradient>
-                </defs>
-              </svg>
-            </div>
-
-            {/* Title */}
-            <h1 className="thank-you-hero__title">
-              <span className="mono gradient">{t('thankYou.title')}</span>
-            </h1>
-
-            {/* Subtitle */}
-            <p className="thank-you-hero__subtitle">
-              {t('thankYou.subtitle')}
-            </p>
-
-            {/* Description */}
-            <p className="thank-you-hero__description">
-              {t('thankYou.description')}
-            </p>
-
-            {/* CTA Button */}
-            <Link to="/" className="btn btn--primary thank-you-hero__button">
-              {t('thankYou.button')}
-            </Link>
-
-            {/* Additional Info */}
-            <div className="thank-you-hero__info">
-              <p className="thank-you-hero__info-text">
-                {t('thankYou.info')}
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <Footer />
+    <div style={{
+      minHeight: '100vh',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      padding: '2rem',
+      textAlign: 'center',
+      background: '#0B0F14',
+      color: '#E5E7EB'
+    }}>
+      <div style={{ maxWidth: '600px' }}>
+        <h1 style={{
+          fontSize: '2.5rem',
+          fontWeight: 'bold',
+          background: 'linear-gradient(135deg, #06B6D4 0%, #8B5CF6 100%)',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          marginBottom: '1rem'
+        }}>
+          {t('thankYou.title')}
+        </h1>
+        
+        <p style={{
+          fontSize: '1.25rem',
+          color: '#06B6D4',
+          marginBottom: '1.5rem'
+        }}>
+          {t('thankYou.subtitle')}
+        </p>
+        
+        <p style={{
+          fontSize: '1.125rem',
+          lineHeight: '1.7',
+          color: '#94A3B8',
+          marginBottom: '2rem'
+        }}>
+          {t('thankYou.description')}
+        </p>
+        
+        <Link 
+          to="/" 
+          style={{
+            display: 'inline-block',
+            padding: '1rem 2rem',
+            background: 'linear-gradient(135deg, #06B6D4 0%, #8B5CF6 100%)',
+            color: 'white',
+            textDecoration: 'none',
+            borderRadius: '0.5rem',
+            fontWeight: '600',
+            fontSize: '1.125rem'
+          }}
+        >
+          {t('thankYou.button')}
+        </Link>
+        
+        <p style={{
+          marginTop: '2rem',
+          fontSize: '0.9375rem',
+          color: '#64748B'
+        }}>
+          {t('thankYou.info')}
+        </p>
+      </div>
     </div>
   );
 };
-
