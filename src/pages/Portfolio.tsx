@@ -308,22 +308,29 @@ export const Portfolio: React.FC = () => {
             </button>
 
             <div className="blog-preview__track">
-              {featuredArticles.map((article) => (
-                <Link to={`/articles/${article.slug}`} key={article.id} className="blog-preview-card fade-up">
-                  <div className="blog-preview-card__icon">
-                    {typeof article.category === 'string' ? article.category.split('→')[0].trim() : article.category[language].split('→')[0].trim()}
-                  </div>
-                  <h3 className="blog-preview-card__title">
-                    {typeof article.title === 'string' ? article.title : article.title[language]}
-                  </h3>
-                  <div className="blog-preview-card__content">
-                    <p>
-                      {(typeof article.excerpt === 'string' ? article.excerpt : article.excerpt[language]).substring(0, 150)}...
-                    </p>
-                  </div>
-                  <span className="blog-preview-card__link">{t('blog_preview.read_more')} →</span>
-                </Link>
-              ))}
+              {featuredArticles.map((article) => {
+                const title = typeof article.title === 'string' ? article.title : article.title[language];
+                const excerpt = typeof article.excerpt === 'string' ? article.excerpt : article.excerpt[language];
+                const category = typeof article.category === 'string' ? article.category : article.category[language];
+                const categoryIcon = category.split('→')[0].trim();
+                
+                return (
+                  <Link to={`/articles/${article.slug}`} key={article.id} className="blog-preview-card fade-up">
+                    <div className="blog-preview-card__icon">
+                      {categoryIcon}
+                    </div>
+                    <h3 className="blog-preview-card__title">
+                      {title}
+                    </h3>
+                    <div className="blog-preview-card__content">
+                      <p>
+                        {excerpt.substring(0, 150)}...
+                      </p>
+                    </div>
+                    <span className="blog-preview-card__link">{t('blog_preview.read_more')} →</span>
+                  </Link>
+                );
+              })}
             </div>
 
             <button className="blog-preview__nav blog-preview__nav--next" aria-label="Next">
