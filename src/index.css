@@ -3548,6 +3548,48 @@ button {
   color: var(--fg);
 }
 
+.social-share {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.social-share__label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--fg-secondary);
+  margin-right: 0.5rem;
+}
+
+.social-share__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  background: var(--bg-muted);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--fg-secondary);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.social-share__link:hover {
+  background: var(--cyan);
+  border-color: var(--cyan);
+  color: var(--bg);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3);
+}
+
+.social-share__link svg {
+  width: 20px;
+  height: 20px;
+}
+
 /* Back Button */
 .article-detail__back {
   margin: 4rem 0 2rem;
