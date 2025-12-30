@@ -5,10 +5,12 @@ import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
 import { SEO } from '../components/SEO';
 import { getFeaturedProjects } from '../data/projectsData';
+import { getFeaturedArticles } from '../data/articlesData';
 
 export const Portfolio: React.FC = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const projects = getFeaturedProjects();
+  const featuredArticles = getFeaturedArticles().slice(0, 3);
 
   // Schema Markup for Portfolio/Profile Page
   const portfolioSchema = {
@@ -229,15 +231,15 @@ export const Portfolio: React.FC = () => {
 
                   <div className="project-card__body">
                     <div className="project-card__item">
-                      <span className="project-card__label project-card__label--problem">Problem</span>
+                      <span className="project-card__label project-card__label--problem">{t('projects.problem')}</span>
                       <p className="project-card__text">{project.problem}</p>
                     </div>
                     <div className="project-card__item">
-                      <span className="project-card__label project-card__label--solution">Solution</span>
+                      <span className="project-card__label project-card__label--solution">{t('projects.solution')}</span>
                       <p className="project-card__text">{project.solution}</p>
                     </div>
                     <div className="project-card__item">
-                      <span className="project-card__label project-card__label--impact">Impact</span>
+                      <span className="project-card__label project-card__label--impact">{t('projects.impact')}</span>
                       <p className="project-card__text">{project.impact}</p>
                     </div>
                   </div>
@@ -254,7 +256,7 @@ export const Portfolio: React.FC = () => {
                           to={project.articleLink}
                           className="project-card__link project-card__link--article"
                         >
-                          📖 Read Story
+                          📖 {t('projects.readStory')}
                           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                             <path d="M5 12h14M12 5l7 7-7 7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                           </svg>
@@ -306,13 +308,18 @@ export const Portfolio: React.FC = () => {
             </button>
 
             <div className="blog-preview__track">
-              {[1, 2, 3].map((num) => (
-                <Link to="/" key={num} className="blog-preview-card fade-up">
-                  <div className="blog-preview-card__icon">{t(`blog_preview_${num}_icon`)}</div>
-                  <h3 className="blog-preview-card__title">{t(`blog_preview_${num}_title`)}</h3>
+              {featuredArticles.map((article) => (
+                <Link to={`/articles/${article.slug}`} key={article.id} className="blog-preview-card fade-up">
+                  <div className="blog-preview-card__icon">
+                    {typeof article.category === 'string' ? article.category.split('→')[0].trim() : article.category[language].split('→')[0].trim()}
+                  </div>
+                  <h3 className="blog-preview-card__title">
+                    {typeof article.title === 'string' ? article.title : article.title[language]}
+                  </h3>
                   <div className="blog-preview-card__content">
-                    <p dangerouslySetInnerHTML={{ __html: t(`blog_preview_${num}_p1`) }} />
-                    <p dangerouslySetInnerHTML={{ __html: t(`blog_preview_${num}_p2`) }} />
+                    <p>
+                      {(typeof article.excerpt === 'string' ? article.excerpt : article.excerpt[language]).substring(0, 150)}...
+                    </p>
                   </div>
                   <span className="blog-preview-card__link">{t('blog_preview.read_more')} →</span>
                 </Link>

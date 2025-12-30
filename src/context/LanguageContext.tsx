@@ -77,6 +77,10 @@ const translations: Record<Language, Translations> = {
     // Projects Section
     'projects.title': 'Projects',
     'projects.subtitle': 'Scroll to explore',
+    'projects.problem': 'Problem',
+    'projects.solution': 'Solution',
+    'projects.impact': 'Impact',
+    'projects.readStory': 'Read Story',
     'project_1_title': '🎯 AI-Powered Recommendation System',
     'project_1_subtitle': 'Built a recommendation engine that increased engagement',
     'project_1_problem': 'Low engagement due to irrelevant content suggestions.',
@@ -212,6 +216,7 @@ const translations: Record<Language, Translations> = {
     'blogpage.featured.overline': 'Deep Dives',
     'blogpage.featured.title': 'Featured Articles',
     'blogpage.featured.subtitle': 'Deep Dives Into AI & Data',
+    'blogpage.featured.viewAll': 'View All Articles',
 
     // Blog Latest Articles
     'blogpage.latest.overline': 'Stay Updated',
@@ -397,6 +402,10 @@ const translations: Record<Language, Translations> = {
     // Projects Section
     'projects.title': 'Projetos',
     'projects.subtitle': 'Role para explorar',
+    'projects.problem': 'Problema',
+    'projects.solution': 'Solução',
+    'projects.impact': 'Impacto',
+    'projects.readStory': 'Ler História',
     'project_1_title': '🎯 Sistema de Recomendação com IA',
     'project_1_subtitle': 'Construí um motor de recomendação que aumentou o engajamento',
     'project_1_problem': 'Baixo engajamento devido a sugestões de conteúdo irrelevantes.',
@@ -532,6 +541,7 @@ const translations: Record<Language, Translations> = {
     'blogpage.featured.overline': 'Mergulhos Profundos',
     'blogpage.featured.title': 'Artigos em Destaque',
     'blogpage.featured.subtitle': 'Mergulhos Profundos em IA & Dados',
+    'blogpage.featured.viewAll': 'Ver Todos os Artigos',
 
     // Blog Latest Articles
     'blogpage.latest.overline': 'Fique Atualizado',

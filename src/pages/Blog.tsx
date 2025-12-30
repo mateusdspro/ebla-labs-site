@@ -206,7 +206,7 @@ export const Blog: React.FC = () => {
 
           <div className="section-header fade-up" style={{ marginTop: '3rem', textAlign: 'center' }}>
             <Link to="/articles" className="btn btn--primary">
-              Ver Todos os Artigos →
+              {t('blogpage.featured.viewAll')} →
             </Link>
           </div>
         </div>
