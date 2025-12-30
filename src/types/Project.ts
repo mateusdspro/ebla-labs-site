@@ -8,5 +8,14 @@ export interface Project {
   tags: string[];
   github: string;
   featured?: boolean;
+  articleLink?: string;
+  series?: string;
 }
+
+
+
+
+
+
+
 

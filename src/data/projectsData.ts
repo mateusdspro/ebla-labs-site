@@ -2,6 +2,19 @@ import { Project } from '../types/Project';
 
 export const projectsData: Project[] = [
   {
+    id: '7',
+    title: '🎙️ Mercurius.Vox',
+    subtitle: 'Sistema de ditado por voz 100% offline e gratuito',
+    problem: 'Pagar $20/mês pelo Wispr Flow — um app que apenas transcreve voz para texto. Eram $240/ano para uma funcionalidade básica, com dados enviados para servidores externos e zero controle sobre privacidade.',
+    solution: 'Construí meu próprio sistema de ditado usando OpenAI Whisper (IA open-source), Python, e Apple Silicon. Push-to-talk universal que funciona em QUALQUER app do Mac (Word, Chrome, ChatGPT, Figma...), 100% offline, com feedback visual e auto-recovery para nunca fechar. Desenvolvido em 8 horas com Claude Sonnet 4.5 no Cursor.',
+    impact: 'De $20/mês para $0/mês. Economia de $240/ano. 100% privado (dados nunca saem do Mac). Sistema imortal que roda 24/7. Transcrição em segundos usando GPU. Open-source para todos usarem.',
+    tags: ['Python', 'Whisper AI', 'PyTorch', 'macOS', 'Open Source', 'Voice AI', 'Claude Sonnet 4.5'],
+    github: 'https://github.com/mateusdspro/mercurius.vox',
+    featured: true,
+    articleLink: '/articles/de-assinante-a-criador-mercurius-vox',
+    series: '🛠️ Stop Paying. Start Building #1'
+  },
+  {
     id: '1',
     title: 'AI-Powered Recommendation System',
     subtitle: 'E-commerce personalization engine',
@@ -80,4 +93,11 @@ export const getAllProjects = (): Project[] => {
 export const getProjectById = (id: string): Project | undefined => {
   return projectsData.find(project => project.id === id);
 };
+
+
+
+
+
+
+
 

@@ -9,6 +9,7 @@ import { Blog } from './pages/Blog';
 import { Portfolio } from './pages/Portfolio';
 import { AboutUs } from './pages/AboutUs';
 import { Articles } from './pages/Articles';
+import { ArticleDetail } from './pages/ArticleDetail';
 import { News } from './pages/News';
 import { ThankYou } from './pages/ThankYou';
 import { ThankYouNewsletter } from './pages/ThankYouNewsletter';
@@ -26,6 +27,7 @@ export default function App() {
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/about-us" element={<AboutUs />} />
             <Route path="/articles" element={<Articles />} />
+            <Route path="/articles/:slug" element={<ArticleDetail />} />
             <Route path="/news" element={<News />} />
             <Route path="/thank-you" element={<ThankYou />} />
             <Route path="/thank-you-newsletter" element={<ThankYouNewsletter />} />
