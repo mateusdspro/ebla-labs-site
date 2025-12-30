@@ -4,9 +4,12 @@ import { useLanguage } from '../context/LanguageContext';
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
 import { SEO } from '../components/SEO';
+import { getFeaturedArticles, getAllArticles } from '../data/articlesData';
 
 export const Blog: React.FC = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const featuredArticles = getFeaturedArticles();
+  const latestArticles = getAllArticles().slice(0, 3); // 3 mais recentes
 
   // Schema Markup for Blog Homepage
   const blogSchema = {
@@ -174,18 +177,26 @@ export const Blog: React.FC = () => {
           </div>
 
           <div className="blog-articles__grid">
-            {[1, 2, 3].map((num) => (
-              <article key={num} className="blog-card fade-up">
+            {featuredArticles.slice(0, 3).map((article) => (
+              <article key={article.id} className="blog-card fade-up">
                 <div className="blog-card__image">
-                  <img src={`/images/blog${num}.jpg`} alt={`Featured Article ${num}`} className="hero-v2__photo--hover" />
-                  <span className="blog-card__category">AI & Data</span>
+                  <img 
+                    src={article.image} 
+                    alt={typeof article.title === 'string' ? article.title : article.title[language]} 
+                    className="hero-v2__photo--hover" 
+                  />
+                  <span className="blog-card__category">
+                    {typeof article.category === 'string' ? article.category : article.category[language]}
+                  </span>
                 </div>
                 <div className="blog-card__content">
-                  <h3 className="blog-card__title">{t(`blog_preview_${num}_title`)}</h3>
+                  <h3 className="blog-card__title">
+                    {typeof article.title === 'string' ? article.title : article.title[language]}
+                  </h3>
                   <p className="blog-card__excerpt">
-                    {t(`blog_preview_${num}_p1`).substring(0, 150)}...
+                    {(typeof article.excerpt === 'string' ? article.excerpt : article.excerpt[language]).substring(0, 150)}...
                   </p>
-                  <Link to="/articles" className="blog-card__link">
+                  <Link to={`/articles/${article.slug}`} className="blog-card__link">
                     {t('blog_preview.read_more')} →
                   </Link>
                 </div>
@@ -210,20 +221,32 @@ export const Blog: React.FC = () => {
           </div>
 
           <div className="blog-latest__grid">
-            {[4, 5, 6, 7, 8].map((num) => (
-              <article key={num} className="latest-card fade-up">
+            {latestArticles.map((article) => (
+              <article key={article.id} className="latest-card fade-up">
                 <div className="latest-card__header">
-                  <span className="latest-card__date">{t(`blogpage.latest.article${num}.date`)}</span>
-                  <span className="latest-card__category">{t(`blogpage.latest.article${num}.category`)}</span>
+                  <span className="latest-card__date">
+                    {new Date(article.date).toLocaleDateString(language === 'pt' ? 'pt-BR' : 'en-US', { 
+                      year: 'numeric', 
+                      month: 'short', 
+                      day: 'numeric' 
+                    })}
+                  </span>
+                  <span className="latest-card__category">
+                    {typeof article.category === 'string' ? article.category : article.category[language]}
+                  </span>
                 </div>
-                <h3 className="latest-card__title">{t(`blogpage.latest.article${num}.title`)}</h3>
-                <p className="latest-card__excerpt">{t(`blogpage.latest.article${num}.excerpt`)}</p>
+                <h3 className="latest-card__title">
+                  {typeof article.title === 'string' ? article.title : article.title[language]}
+                </h3>
+                <p className="latest-card__excerpt">
+                  {(typeof article.excerpt === 'string' ? article.excerpt : article.excerpt[language]).substring(0, 120)}...
+                </p>
                 <div className="latest-card__footer">
                   <div className="latest-card__meta">
-                    <span className="latest-card__author">{t(`blogpage.latest.article${num}.author`)}</span>
-                    <span className="latest-card__reading-time">{t(`blogpage.latest.article${num}.readTime`)}</span>
+                    <span className="latest-card__author">{article.author}</span>
+                    <span className="latest-card__reading-time">{article.readTime} min {language === 'pt' ? 'de leitura' : 'read'}</span>
                   </div>
-                  <Link to="/" className="latest-card__link">
+                  <Link to={`/articles/${article.slug}`} className="latest-card__link">
                     {t('blog_preview.read_more')} →
                   </Link>
                 </div>
